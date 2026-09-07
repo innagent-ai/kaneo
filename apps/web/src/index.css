@@ -1,3 +1,4 @@
+/* InnAgent theme (Hotelify PRO tokens) — fork innagent-ai/kaneo */
 @import "tailwindcss";
 
 input:-webkit-autofill,
@@ -139,107 +140,91 @@ input:-webkit-autofill:active {
     "Courier New",
     monospace;
   --radius: 0.625rem;
-  --accent: --alpha(var(--color-black) / 4%);
-  --accent-foreground: var(--color-neutral-800);
-  --background: var(--color-white);
-  --border: --alpha(var(--color-black) / 8%);
-  --card: var(--color-white);
-  --card-foreground: var(--color-neutral-800);
-  --destructive: var(--color-red-500);
-  --destructive-foreground: var(--color-red-700);
-  --foreground: var(--color-neutral-800);
-  --info: var(--color-blue-500);
-  --info-foreground: var(--color-blue-700);
-  --input: --alpha(var(--color-black) / 10%);
-  --muted: --alpha(var(--color-black) / 4%);
-  --muted-foreground: color-mix(in srgb, var(--color-neutral-500) 90%, var(--color-black));
-  --popover: var(--color-white);
-  --popover-foreground: var(--color-neutral-800);
-  --primary: var(--color-neutral-800);
-  --primary-foreground: var(--color-neutral-50);
-  --ring: var(--color-neutral-400);
-  --secondary: --alpha(var(--color-black) / 4%);
-  --secondary-foreground: var(--color-neutral-800);
+  --accent: #E9F2FD;
+  --accent-foreground: #292B2F;
+  --background: #EEF3F9;
+  --border: #E7E7E7;
+  --card: #FFFFFF;
+  --card-foreground: #292B2F;
+  --destructive: #FF5F5A;
+  --destructive-foreground: #FF5F5A;
+  --foreground: #292B2F;
+  --info: #258BFB;
+  --info-foreground: #258BFB;
+  --input: #E7E7E7;
+  --muted: #F8F8F8;
+  --muted-foreground: #6E6E6E;
+  --popover: #FFFFFF;
+  --popover-foreground: #292B2F;
+  --primary: #292B2F;
+  --primary-foreground: #F5F7FA;
+  --ring: #258BFB;
+  --secondary: #F8F8F8;
+  --secondary-foreground: #292B2F;
   --success: var(--color-emerald-500);
   --success-foreground: var(--color-emerald-700);
   --warning: var(--color-amber-500);
   --warning-foreground: var(--color-amber-700);
-  --chart-1: var(--color-orange-600);
-  --chart-2: var(--color-teal-600);
-  --chart-3: var(--color-cyan-900);
-  --chart-4: var(--color-amber-400);
-  --chart-5: var(--color-amber-500);
-  --sidebar: var(--color-neutral-50);
-  --sidebar-foreground: color-mix(
-    in srgb,
-    var(--color-neutral-800) 64%,
-    var(--sidebar)
-  );
-  --sidebar-primary: var(--color-neutral-800);
-  --sidebar-primary-foreground: var(--color-neutral-50);
-  --sidebar-accent: --alpha(var(--color-black) / 4%);
-  --sidebar-accent-foreground: var(--color-neutral-800);
-  --sidebar-border: --alpha(var(--color-black) / 6%);
-  --sidebar-ring: var(--color-neutral-400);
-  --code: var(--color-white);
+  --chart-1: #258BFB;
+  --chart-2: #D8EB12;
+  --chart-3: #6E6E6E;
+  --chart-4: #A3ABB5;
+  --chart-5: #292B2F;
+  --sidebar: #FFFFFF;
+  --sidebar-foreground: #292B2F;
+  --sidebar-primary: #258BFB;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #EEF3F9;
+  --sidebar-accent-foreground: #292B2F;
+  --sidebar-border: #E7E7E7;
+  --sidebar-ring: #258BFB;
+  --code: #FFFFFF;
   --code-foreground: var(--foreground);
-  --code-highlight: --alpha(var(--color-black) / 4%);
+  --code-highlight: #F8F8F8;
 }
 
 .dark {
-  --accent: --alpha(var(--color-white) / 4%);
-  --accent-foreground: var(--color-neutral-100);
-  --background: color-mix(
-    in srgb,
-    var(--color-neutral-950) 96%,
-    var(--color-white)
-  );
-  --border: --alpha(var(--color-white) / 6%);
-  --card: color-mix(in srgb, var(--background) 98%, var(--color-white));
-  --card-foreground: var(--color-neutral-100);
-  --destructive: color-mix(in srgb, var(--color-red-500) 90%, var(--color-white));
-  --destructive-foreground: var(--color-red-400);
-  --foreground: var(--color-neutral-100);
-  --info: var(--color-blue-500);
-  --info-foreground: var(--color-blue-400);
-  --input: --alpha(var(--color-white) / 8%);
-  --muted: --alpha(var(--color-white) / 4%);
-  --muted-foreground: color-mix(in srgb, var(--color-neutral-500) 90%, var(--color-white));
-  --popover: color-mix(in srgb, var(--background) 98%, var(--color-white));
-  --popover-foreground: var(--color-neutral-100);
-  --primary: var(--color-neutral-100);
-  --primary-foreground: var(--color-neutral-800);
-  --ring: var(--color-neutral-500);
-  --secondary: --alpha(var(--color-white) / 4%);
-  --secondary-foreground: var(--color-neutral-100);
+  --accent: #252A31;
+  --accent-foreground: #F5F7FA;
+  --background: #171A1F;
+  --border: #343A43;
+  --card: #20242A;
+  --card-foreground: #F5F7FA;
+  --destructive: #FF5F5A;
+  --destructive-foreground: #F5F7FA;
+  --foreground: #F5F7FA;
+  --info: #258BFB;
+  --info-foreground: #258BFB;
+  --input: #3C434D;
+  --muted: #252A31;
+  --muted-foreground: #A3ABB5;
+  --popover: #24292F;
+  --popover-foreground: #F5F7FA;
+  --primary: #F5F7FA;
+  --primary-foreground: #171A1F;
+  --ring: #258BFB;
+  --secondary: #252A31;
+  --secondary-foreground: #F5F7FA;
   --success: var(--color-emerald-500);
   --success-foreground: var(--color-emerald-400);
   --warning: var(--color-amber-500);
   --warning-foreground: var(--color-amber-400);
-  --chart-1: var(--color-blue-700);
-  --chart-2: var(--color-emerald-500);
-  --chart-3: var(--color-amber-500);
-  --chart-4: var(--color-purple-500);
-  --chart-5: var(--color-rose-500);
-  --sidebar: color-mix(
-    in srgb,
-    var(--color-neutral-950) 97%,
-    var(--color-white)
-  );
-  --sidebar-foreground: color-mix(
-    in srgb,
-    var(--color-neutral-100) 64%,
-    var(--sidebar)
-  );
-  --sidebar-primary: var(--color-neutral-100);
-  --sidebar-primary-foreground: var(--color-neutral-800);
-  --sidebar-accent: --alpha(var(--color-white) / 4%);
-  --sidebar-accent-foreground: var(--color-neutral-100);
-  --sidebar-border: --alpha(var(--color-white) / 5%);
-  --sidebar-ring: var(--color-neutral-400);
-  --code: color-mix(in srgb, var(--background) 98%, var(--color-white));
+  --chart-1: #258BFB;
+  --chart-2: #D8EB12;
+  --chart-3: #A3ABB5;
+  --chart-4: #6E6E6E;
+  --chart-5: #F5F7FA;
+  --sidebar: #171A1F;
+  --sidebar-foreground: #F5F7FA;
+  --sidebar-primary: #258BFB;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #252A31;
+  --sidebar-accent-foreground: #F5F7FA;
+  --sidebar-border: #343A43;
+  --sidebar-ring: #258BFB;
+  --code: #20242A;
   --code-foreground: var(--foreground);
-  --code-highlight: --alpha(var(--color-white) / 4%);
+  --code-highlight: #252A31;
 }
 
 @layer base {
