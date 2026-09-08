@@ -3,56 +3,60 @@
 
 <head>
   <meta charset="UTF-8" />
-  <title>Kaneo - All you need. Nothing you don't.</title>
-  <meta name="title" content="Kaneo - All you need. Nothing you don't.">
+  <title>InnTask</title>
+  <meta name="title" content="InnTask">
   <meta name="description"
-    content="All you need. Nothing you don't. Open source project management that works for you, not against you.">
-  <meta name="keywords" content="project management, open source, task management, team collaboration, kanban, self-hosted">
+    content="Tarefas da operação do hotel — InnTask.">
 
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://kaneo.app">
-  <meta property="og:title" content="Kaneo - All you need. Nothing you don't.">
+  <meta property="og:title" content="InnTask">
   <meta property="og:description"
-    content="Open source project management that works for you, not against you. Self-hosted, simple, and powerful.">
-  <meta property="og:image" content="https://assets.kaneo.app/readme.png">
+    content="Tarefas da operação do hotel — InnTask.">
 
   <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://kaneo.app">
-  <meta property="twitter:title" content="Kaneo - All you need. Nothing you don't.">
+  <meta property="twitter:title" content="InnTask">
   <meta property="twitter:description"
-    content="Open source project management that works for you, not against you. Self-hosted, simple, and powerful.">
-  <meta property="twitter:image" content="https://assets.kaneo.app/readme.png">
+    content="Tarefas da operação do hotel — InnTask.">
 
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="shortcut icon" href="/favicon.svg" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-  <meta name="apple-mobile-web-app-title" content="Kaneo" />
+  <meta name="apple-mobile-web-app-title" content="InnTask" />
   <link rel="manifest" href="/site.webmanifest" />
 
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:wght@300;500;600;700&display=swap" rel="stylesheet" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="application-name" content="Kaneo">
-  <link rel="canonical" href="https://kaneo.app">
-
-  <script>
-    if (window.location.hostname === 'demo.kaneo.app') {
-      const script = document.createElement('script');
-      script.defer = true;
-      script.setAttribute('data-domain', 'demo.kaneo.app');
-      script.src = 'https://plausible.kaneo.app/js/script.js';
-      document.head.appendChild(script);
+  <meta name="application-name" content="InnTask">
+  <!-- A PORTA da família Inn — o splash antes do bundle. Estilo no <head> e
+       marca no topo do <body>: pinta no PRIMEIRO quadro, sem esperar rede (o
+       símbolo vai embutido, nunca por <img src>). Some sozinho quando o React
+       monta em #root — `:has()` já é pré-requisito do próprio app. -->
+  <style>
+    #inn-splash {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #EEF3F9;
     }
-
-    if (window.location.hostname === 'cloud.kaneo.app') {
-      const script = document.createElement('script');
-      script.defer = true;
-      script.setAttribute('data-domain', 'cloud.kaneo.app');
-      script.src = 'https://plausible.kaneo.app/js/script.js';
-      document.head.appendChild(script);
+    body:has(#root > *) #inn-splash {
+      display: none;
     }
-  </script>
+  </style>
 </head>
 
 <body>
+  <div id="inn-splash"><svg width="48" height="48" viewBox="0 0 121 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M46.8653 73.1039L59.9873 108.547L35.1233 119.991L25.6268 94.3696L0.00524902 84.8461L11.4227 59.9821L46.8653 73.1039Z" fill="#DAF06B"/>
+<path d="M46.8653 46.8602L11.4227 59.9821L0.00524902 35.1181L25.6268 25.6216L35.1233 0L59.9873 11.4174L46.8653 46.8602Z" fill="#DAF06B"/>
+<path d="M108.66 59.9821L120.105 84.8461L94.3747 94.3696L84.8784 119.991L59.9872 108.547L73.1363 73.1039L108.66 59.9821Z" fill="#DAF06B"/>
+<path d="M73.1363 46.8602L59.9872 11.4174L84.8784 0L94.3747 25.6216L120.105 35.1181L108.66 59.9821L73.1363 46.8602Z" fill="#DAF06B"/>
+</svg></div>
   <div id="root"></div>
   <script type="module" src="/src/main.tsx"></script>
 </body>
