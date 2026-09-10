@@ -3,58 +3,199 @@
 
 <head>
   <meta charset="UTF-8" />
-  <title>Kaneo - All you need. Nothing you don't.</title>
-  <meta name="title" content="Kaneo - All you need. Nothing you don't.">
+  <title>InnTask</title>
+  <meta name="title" content="InnTask">
   <meta name="description"
-    content="All you need. Nothing you don't. Open source project management that works for you, not against you.">
-  <meta name="keywords" content="project management, open source, task management, team collaboration, kanban, self-hosted">
+    content="Tarefas da operação do hotel — InnTask.">
 
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://kaneo.app">
-  <meta property="og:title" content="Kaneo - All you need. Nothing you don't.">
+  <meta property="og:title" content="InnTask">
   <meta property="og:description"
-    content="Open source project management that works for you, not against you. Self-hosted, simple, and powerful.">
-  <meta property="og:image" content="https://assets.kaneo.app/readme.png">
+    content="Tarefas da operação do hotel — InnTask.">
 
   <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://kaneo.app">
-  <meta property="twitter:title" content="Kaneo - All you need. Nothing you don't.">
+  <meta property="twitter:title" content="InnTask">
   <meta property="twitter:description"
-    content="Open source project management that works for you, not against you. Self-hosted, simple, and powerful.">
-  <meta property="twitter:image" content="https://assets.kaneo.app/readme.png">
+    content="Tarefas da operação do hotel — InnTask.">
 
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="shortcut icon" href="/favicon.svg" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-  <meta name="apple-mobile-web-app-title" content="Kaneo" />
+  <meta name="apple-mobile-web-app-title" content="InnTask" />
   <link rel="manifest" href="/site.webmanifest" />
 
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:wght@300;500;600;700&display=swap" rel="stylesheet" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="application-name" content="Kaneo">
-  <link rel="canonical" href="https://kaneo.app">
-
-  <script>
-    if (window.location.hostname === 'demo.kaneo.app') {
-      const script = document.createElement('script');
-      script.defer = true;
-      script.setAttribute('data-domain', 'demo.kaneo.app');
-      script.src = 'https://plausible.kaneo.app/js/script.js';
-      document.head.appendChild(script);
+  <meta name="application-name" content="InnTask">
+  <!-- A PORTA da família Inn — o splash antes do bundle. Estilo no <head> e
+       marca no topo do <body>: pinta no PRIMEIRO quadro, sem esperar rede (o
+       símbolo vai embutido, nunca por <img src>). Some sozinho quando o React
+       monta em #root — `:has()` já é pré-requisito do próprio app. -->
+  <style>
+    #inn-splash {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #EEF3F9;
     }
-
-    if (window.location.hostname === 'cloud.kaneo.app') {
-      const script = document.createElement('script');
-      script.defer = true;
-      script.setAttribute('data-domain', 'cloud.kaneo.app');
-      script.src = 'https://plausible.kaneo.app/js/script.js';
-      document.head.appendChild(script);
+    body:has(#root > *) #inn-splash {
+      display: none;
     }
-  </script>
+  </style>
 </head>
 
 <body>
+  <div id="inn-splash"><svg width="48" height="48" viewBox="0 0 121 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M46.8653 73.1039L59.9873 108.547L35.1233 119.991L25.6268 94.3696L0.00524902 84.8461L11.4227 59.9821L46.8653 73.1039Z" fill="#DAF06B"/>
+<path d="M46.8653 46.8602L11.4227 59.9821L0.00524902 35.1181L25.6268 25.6216L35.1233 0L59.9873 11.4174L46.8653 46.8602Z" fill="#DAF06B"/>
+<path d="M108.66 59.9821L120.105 84.8461L94.3747 94.3696L84.8784 119.991L59.9872 108.547L73.1363 73.1039L108.66 59.9821Z" fill="#DAF06B"/>
+<path d="M73.1363 46.8602L59.9872 11.4174L84.8784 0L94.3747 25.6216L120.105 35.1181L108.66 59.9821L73.1363 46.8602Z" fill="#DAF06B"/>
+</svg></div>
   <div id="root"></div>
   <script type="module" src="/src/main.tsx"></script>
-</body>
+<style>:root{--inn-sel-bg:#FFF;--inn-sel-fg:#292B2F;--inn-sel-borda:#E7E7E7;--inn-sel-hover:#F8F8F8;--inn-sel-muted:#6E6E6E}html.inn-porta #inn-seletor{display:none}</style><script>window.INN_SAIR=function(){location.href='/logout'};window.INN_SAIR_TODOS=['https://mind.innagent.ai/login','https://chat.innagent.ai/app/logout','https://data.innagent.ai/logout/','https://team.innagent.ai/logout','https://app.innagent.ai/logout'];if(/(sign-in|sign-up|login|register)/.test(location.pathname))document.documentElement.classList.add('inn-porta');</script><style id="inn-seletor-css">/* O widget da família Inn — canto INFERIOR DIREITO.
+O canto superior esquerdo foi abandonado em 09/09: é território disputado em todo motor
+(no LibreChat o símbolo caiu POR CIMA do botão nativo). O inferior direito é livre nos seis,
+e é onde o usuário já procura ajuda — é a convenção do widget de chat e da IA do Notion.
+
+Sem cor própria: consome --inn-sel-* que cada motor mapeia. A v1 pintava por
+prefers-color-scheme (o tema do SISTEMA) enquanto os motores decidem por classe no <html>. */
+#inn-seletor{position:fixed;right:20px;bottom:20px;z-index:99999;font-family:Lato,system-ui,sans-serif}
+#inn-btn{width:48px;height:48px;border:0;border-radius:50%;cursor:pointer;display:flex;
+align-items:center;justify-content:center;background:var(--inn-sel-bg,#FFF);
+border:1px solid var(--inn-sel-borda,#E7E7E7);box-shadow:0 4px 14px rgba(0,0,0,.14);
+transition:transform .14s,box-shadow .14s;margin-left:auto}
+#inn-btn:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(0,0,0,.18)}
+#inn-btn:focus-visible{outline:2px solid #DAF06B;outline-offset:2px}
+#inn-btn svg{width:26px;height:26px;display:block}
+/* o ponto de lima só acende quando há algo esperando em OUTRO app — o widget fechado
+   precisa saber dizer "vale abrir" sem obrigar a abrir */
+#inn-sino{position:absolute;top:-2px;right:-2px;min-width:18px;height:18px;padding:0 5px;
+border-radius:9px;background:#DAF06B;color:#292B2F;font-size:11px;font-weight:700;
+line-height:18px;text-align:center;display:none}
+#inn-sino[data-n]{display:block}
+#inn-menu{position:absolute;right:0;bottom:60px;width:300px;background:var(--inn-sel-bg,#FFF);
+border:1px solid var(--inn-sel-borda,#E7E7E7);border-radius:16px;
+box-shadow:0 12px 32px rgba(0,0,0,.18);overflow:hidden;display:flex;flex-direction:column;
+/* a animacao sai da QUINA do botao (canto inferior direito), nao do centro: o menu
+   parece brotar de onde foi clicado. `hidden` volta so depois dela, senao some antes. */
+opacity:0;transform:translateY(6px) scale(.97);transform-origin:100% 100%;
+transition:opacity .14s ease-out,transform .16s cubic-bezier(.2,.8,.3,1)}
+#inn-menu.inn-aberto{opacity:1;transform:none;pointer-events:auto}
+/* 🪤 O FANTASMA: `#inn-menu` e seletor de ID e VENCE o `[hidden]` do navegador (que e
+   so `display:none` da folha do UA). Com `hidden` de volta, o `display:flex` desta regra
+   continuava valendo: o menu ficava invisivel por opacity e SEGUIA capturando clique —
+   no InnChat, clicar para atribuir vendedor reabria o menu ja fechado.
+   Duas travas, de proposito: `pointer-events` resolve durante a animacao (quando o
+   elemento AINDA precisa existir), e `[hidden]` resolve depois dela. Uma so nao cobre
+   as duas janelas. */
+#inn-menu{pointer-events:none}
+#inn-menu[hidden]{display:none}
+#inn-btn[aria-expanded=true]{transform:translateY(-1px) rotate(90deg)}
+#inn-btn[aria-expanded=true] svg{transform:rotate(-90deg)}
+#inn-btn svg{transition:transform .18s cubic-bezier(.2,.8,.3,1)}
+@media(prefers-reduced-motion:reduce){ #inn-menu,#inn-btn,#inn-btn svg{transition:none}}
+#inn-cab{padding:14px 16px 12px;border-bottom:1px solid var(--inn-sel-borda,#E7E7E7)}
+#inn-cab b{display:block;font-size:14px;font-weight:700;color:var(--inn-sel-fg,#292B2F)}
+#inn-cab i{display:block;font-size:12px;font-style:normal;color:var(--inn-sel-muted,#6E6E6E);
+margin-top:2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+#inn-apps{padding:6px;display:flex;flex-direction:column;max-height:326px;overflow-y:auto}
+.inn-item{display:flex;align-items:center;gap:12px;padding:9px 10px;border-radius:10px;
+text-decoration:none;color:var(--inn-sel-fg,#292B2F)}
+.inn-item:hover{background:var(--inn-sel-hover,#F8F8F8)}
+.inn-item:focus-visible{outline:2px solid #DAF06B;outline-offset:-2px}
+.inn-item[aria-current=page]{background:var(--inn-sel-hover,#F8F8F8);cursor:default}
+.inn-item[aria-current=page] .inn-txt b::after{content:'';display:inline-block;width:5px;height:5px;
+border-radius:50%;background:#DAF06B;margin-left:7px;vertical-align:middle}
+.inn-ico{flex:0 0 20px;height:20px;display:block}
+.inn-txt{display:flex;flex-direction:column;line-height:1.25;min-width:0;flex:1}
+.inn-txt b{font-size:14px;font-weight:700}
+.inn-txt i{font-size:12px;font-style:normal;color:var(--inn-sel-muted,#6E6E6E)}
+/* o CONTADOR: o espaço existe desde já; o número chega quando o agregador existir.
+   Sem número, nada aparece — não há caixa vazia pedindo explicação. */
+.inn-n{flex:0 0 auto;min-width:20px;height:20px;padding:0 6px;border-radius:10px;
+background:var(--inn-sel-hover,#F8F8F8);color:var(--inn-sel-muted,#6E6E6E);
+font-size:11px;font-weight:700;line-height:20px;text-align:center;display:none}
+.inn-n[data-n]{display:block}
+.inn-n[data-urgente]{background:#DAF06B;color:#292B2F}
+#inn-pe{display:flex;border-top:1px solid var(--inn-sel-borda,#E7E7E7)}
+.inn-acao{flex:1;display:flex;align-items:center;justify-content:center;gap:7px;padding:11px 8px;
+border:0;background:transparent;cursor:pointer;font:700 12px Lato,system-ui,sans-serif;
+color:var(--inn-sel-muted,#6E6E6E);text-decoration:none}
+.inn-acao:hover{background:var(--inn-sel-hover,#F8F8F8);color:var(--inn-sel-fg,#292B2F)}
+.inn-acao:focus-visible{outline:2px solid #DAF06B;outline-offset:-2px}
+.inn-acao+.inn-acao{border-left:1px solid var(--inn-sel-borda,#E7E7E7)}</style><div id="inn-seletor"><div id="inn-menu" hidden><div id="inn-cab"><b></b><i></i></div><div id="inn-apps"><a class="inn-item" href="https://app.innagent.ai"><span class="inn-ico"><svg viewBox="0 0 7242 7236" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2825.66 4408.17L3616.92 6545.37L2117.62 7235.48L1544.98 5690.49L0 5116.22L688.471 3616.92L2825.66 4408.17Z" fill="#DAF06B"/><path d="M2825.66 2825.67L688.471 3616.92L0 2117.62L1544.98 1544.98L2117.62 0L3616.92 688.472L2825.66 2825.67Z" fill="#D2C5EF"/><path d="M6551.89 3616.92L7241.99 5116.22L5690.48 5690.49L5117.85 7235.48L3616.91 6545.37L4409.8 4408.17L6551.89 3616.92Z" fill="#BFE2FB"/><path d="M4409.8 2825.67L3616.91 688.472L5117.85 0L5690.48 1544.98L7241.99 2117.62L6551.89 3616.92L4409.8 2825.67Z" fill="#FFED6E"/></svg></span><span class="inn-txt"><b>InnAgent</b><i>o painel</i></span><span class="inn-n" data-app="innagent"></span></a><a class="inn-item" href="https://chat.innagent.ai"><span class="inn-ico"><svg width="20" height="20" viewBox="0 0 121 120" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M46.8653 73.104L59.9873 108.547L35.1233 119.991L25.6268 94.3697L0.00524902 84.8461L11.4227 59.9821L46.8653 73.104Z" fill="#BFE2FB"/><path d="M46.8653 46.8602L11.4227 59.9821L0.00524902 35.1181L25.6268 25.6216L35.1233 0L59.9873 11.4174L46.8653 46.8602Z" fill="#BFE2FB"/><path d="M108.66 59.9821L120.105 84.8461L94.3747 94.3697L84.8784 119.991L59.9872 108.547L73.1363 73.104L108.66 59.9821Z" fill="#BFE2FB"/><path d="M73.1363 46.8602L59.9872 11.4174L84.8784 0L94.3747 25.6216L120.105 35.1181L108.66 59.9821L73.1363 46.8602Z" fill="#BFE2FB"/></svg></span><span class="inn-txt"><b>InnChat</b><i>atendimento do hóspede</i></span><span class="inn-n" data-app="innchat"></span></a><a class="inn-item" href="https://mind.innagent.ai"><span class="inn-ico"><svg width="20" height="20" viewBox="0 0 121 120" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M46.8653 73.104L59.9873 108.547L35.1233 119.991L25.6268 94.3697L0.00524902 84.8461L11.4227 59.9821L46.8653 73.104Z" fill="#A2BAFF"/><path d="M46.8653 46.8602L11.4227 59.9821L0.00524902 35.1181L25.6268 25.6216L35.1233 0L59.9873 11.4174L46.8653 46.8602Z" fill="#A2BAFF"/><path d="M108.66 59.9821L120.105 84.8461L94.3747 94.3697L84.8784 119.991L59.9872 108.547L73.1363 73.104L108.66 59.9821Z" fill="#A2BAFF"/><path d="M73.1363 46.8602L59.9872 11.4174L84.8784 0L94.3747 25.6216L120.105 35.1181L108.66 59.9821L73.1363 46.8602Z" fill="#A2BAFF"/></svg></span><span class="inn-txt"><b>InnMind</b><i>o cérebro da Sophia</i></span><span class="inn-n" data-app="innmind"></span></a><span class="inn-item" aria-current="page"><span class="inn-ico"><svg width="20" height="20" viewBox="0 0 121 120" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M46.8653 73.1039L59.9873 108.547L35.1233 119.991L25.6268 94.3696L0.00524902 84.8461L11.4227 59.9821L46.8653 73.1039Z" fill="#DAF06B"/><path d="M46.8653 46.8602L11.4227 59.9821L0.00524902 35.1181L25.6268 25.6216L35.1233 0L59.9873 11.4174L46.8653 46.8602Z" fill="#DAF06B"/><path d="M108.66 59.9821L120.105 84.8461L94.3747 94.3696L84.8784 119.991L59.9872 108.547L73.1363 73.1039L108.66 59.9821Z" fill="#DAF06B"/><path d="M73.1363 46.8602L59.9872 11.4174L84.8784 0L94.3747 25.6216L120.105 35.1181L108.66 59.9821L73.1363 46.8602Z" fill="#DAF06B"/></svg></span><span class="inn-txt"><b>InnTask</b><i>tarefas da operação</i></span><span class="inn-n" data-app="inntask"></span></span><a class="inn-item" href="https://team.innagent.ai"><span class="inn-ico"><svg width="20" height="20" viewBox="0 0 121 120" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M46.8653 73.104L59.9873 108.547L35.1233 119.991L25.6268 94.3697L0.00524902 84.8461L11.4227 59.9821L46.8653 73.104Z" fill="#D2C5EF"/><path d="M46.8653 46.8602L11.4227 59.9821L0.00524902 35.1181L25.6268 25.6216L35.1233 0L59.9873 11.4174L46.8653 46.8602Z" fill="#D2C5EF"/><path d="M108.66 59.9821L120.105 84.8461L94.3747 94.3697L84.8784 119.991L59.9872 108.547L73.1363 73.104L108.66 59.9821Z" fill="#D2C5EF"/><path d="M73.1363 46.8602L59.9872 11.4174L84.8784 0L94.3747 25.6216L120.105 35.1181L108.66 59.9821L73.1363 46.8602Z" fill="#D2C5EF"/></svg></span><span class="inn-txt"><b>InnTeam</b><i>o time de agentes</i></span><span class="inn-n" data-app="innteam"></span></a><a class="inn-item" href="https://data.innagent.ai"><span class="inn-ico"><svg width="20" height="20" viewBox="0 0 121 120" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M46.8653 73.104L59.9873 108.547L35.1233 119.991L25.6268 94.3697L0.00524902 84.8461L11.4227 59.9821L46.8653 73.104Z" fill="#FFB9A7"/><path d="M46.8653 46.8602L11.4227 59.9821L0.00524902 35.1181L25.6268 25.6216L35.1233 0L59.9873 11.4174L46.8653 46.8602Z" fill="#FFB9A7"/><path d="M108.66 59.9821L120.105 84.8461L94.3747 94.3697L84.8784 119.991L59.9872 108.547L73.1363 73.104L108.66 59.9821Z" fill="#FFB9A7"/><path d="M73.1363 46.8602L59.9872 11.4174L84.8784 0L94.3747 25.6216L120.105 35.1181L108.66 59.9821L73.1363 46.8602Z" fill="#FFB9A7"/></svg></span><span class="inn-txt"><b>InnData</b><i>os números do hotel</i></span><span class="inn-n" data-app="inndata"></span></a></div><div id="inn-pe"><button class="inn-acao" id="inn-tema" type="button">◐ Tema</button><a class="inn-acao" id="inn-sair">↪ Sair</a></div></div><button id="inn-btn" aria-expanded="false" aria-label="InnTask — família Inn: trocar de produto, tema e sair"><svg width="26" height="26" viewBox="0 0 121 120" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M46.8653 73.1039L59.9873 108.547L35.1233 119.991L25.6268 94.3696L0.00524902 84.8461L11.4227 59.9821L46.8653 73.1039Z" fill="#DAF06B"/><path d="M46.8653 46.8602L11.4227 59.9821L0.00524902 35.1181L25.6268 25.6216L35.1233 0L59.9873 11.4174L46.8653 46.8602Z" fill="#DAF06B"/><path d="M108.66 59.9821L120.105 84.8461L94.3747 94.3696L84.8784 119.991L59.9872 108.547L73.1363 73.1039L108.66 59.9821Z" fill="#DAF06B"/><path d="M73.1363 46.8602L59.9872 11.4174L84.8784 0L94.3747 25.6216L120.105 35.1181L108.66 59.9821L73.1363 46.8602Z" fill="#DAF06B"/></svg><span id="inn-sino"></span></button></div><script>(function(){
+var w=document.getElementById('inn-seletor'),b=document.getElementById('inn-btn'),
+    m=document.getElementById('inn-menu');
+if(!w||!b||!m)return;
+
+// ABRIR/FECHAR. A v1 usava stopPropagation para o clique no botao nao chegar ao document
+// (que fecha) — e stopPropagation e derrotado por qualquer handler em fase de CAPTURA, que
+// e o que os motores usam para fechar os proprios menus. O robusto e perguntar ONDE o
+// clique caiu: dentro do widget nao fecha, fora fecha. Nao depende de ordem de listener.
+var aberto=false;
+function pinta(v){
+  aberto=v;
+  b.setAttribute('aria-expanded',String(v));
+  m.classList.toggle('inn-aberto',v);
+  if(v){m.hidden=false;}
+  // o hidden so volta DEPOIS da animacao de saida, senao o menu some antes de encolher
+  else{setTimeout(function(){if(!aberto)m.hidden=true;},160);}
+}
+b.addEventListener('click',function(){pinta(!aberto);});
+document.addEventListener('click',function(e){if(aberto&&!w.contains(e.target))pinta(false);},true);
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&aberto){pinta(false);b.focus();}});
+
+var c=window.INN_CONTA||{};
+var cab=document.getElementById('inn-cab');
+if(c.conta||c.usuario){
+  if(c.conta)cab.querySelector('b').textContent=c.conta;
+  if(c.usuario)cab.querySelector('i').textContent=c.usuario;
+}else cab.remove();
+
+// TEMA e SAIR sao do HOST. O que o motor nao entrega SOME do menu, em vez de existir e falhar.
+var pe=document.getElementById('inn-pe');
+var tema=document.getElementById('inn-tema'),sair=document.getElementById('inn-sair');
+if(window.INN_TEMA)tema.addEventListener('click',function(){
+  var novo=window.INN_TEMA();
+  if(novo)tema.lastChild.textContent=' '+novo;
+});else tema.remove();
+
+// SAIR DE TODOS. Os apps sao subdominios de innagent.ai, entao um iframe de chat.* dentro de
+// mind.* e SAME-SITE: cookies SameSite=Lax viajam e o logout de cada motor roda de verdade.
+// Cross-site nao funcionaria. Cada iframe tem seu proprio destino porque nao existe SSO —
+// nao ha uma sessao unica para derrubar, ha seis.
+function sairDeTodos(){
+  sair.textContent='saindo…';
+  var urls=(window.INN_SAIR_TODOS||[]);
+  var caixa=document.createElement('div');caixa.style.display='none';
+  urls.forEach(function(u){var f=document.createElement('iframe');f.src=u;caixa.appendChild(f);});
+  document.body.appendChild(caixa);
+  // o local por ultimo: derrubar a propria sessao antes mataria os iframes junto
+  setTimeout(function(){ if(window.INN_SAIR)window.INN_SAIR(); },900);
+}
+if(window.INN_SAIR||window.INN_SAIR_TODOS)sair.addEventListener('click',sairDeTodos);
+else sair.remove();
+if(!pe.children.length)pe.remove();
+
+if(window.INN_PLANTAO)window.INN_PLANTAO(function(dados){
+  var total=0;
+  Object.keys(dados||{}).forEach(function(k){
+    var el=document.querySelector('.inn-n[data-app='+k+']');
+    if(!el||!dados[k]||!dados[k].n)return;
+    el.textContent=dados[k].n;el.setAttribute('data-n','');
+    if(dados[k].urgente)el.setAttribute('data-urgente','');
+    total+=dados[k].n;
+  });
+  var s=document.getElementById('inn-sino');
+  if(total){s.textContent=total>99?'99+':total;s.setAttribute('data-n','');}
+});
+})();</script></body>
 
 </html>

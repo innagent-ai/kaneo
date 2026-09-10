@@ -1,3 +1,4 @@
+/* InnAgent theme (Hotelify PRO tokens) — fork innagent-ai/kaneo */
 @import "tailwindcss";
 @import "@fontsource-variable/geist";
 @import "@fontsource-variable/geist-mono";
@@ -107,11 +108,8 @@ input:-webkit-autofill:active {
 
 :root {
   --font-sans:
-    "Geist Variable",
-    ui-sans-serif,
-    system-ui,
-    sans-serif;
-  --font-heading: var(--font-sans);
+    "Lato", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "Bricolage Grotesque", var(--font-sans);
   --font-mono:
     "Geist Mono Variable",
     ui-monospace,
@@ -123,107 +121,91 @@ input:-webkit-autofill:active {
     "Courier New",
     monospace;
   --radius: 0.625rem;
-  --accent: --alpha(var(--color-black) / 4%);
-  --accent-foreground: var(--color-neutral-800);
-  --background: var(--color-white);
-  --border: --alpha(var(--color-black) / 8%);
-  --card: var(--color-white);
-  --card-foreground: var(--color-neutral-800);
-  --destructive: var(--color-red-500);
-  --destructive-foreground: var(--color-red-700);
-  --foreground: var(--color-neutral-800);
-  --info: var(--color-blue-500);
-  --info-foreground: var(--color-blue-700);
-  --input: --alpha(var(--color-black) / 10%);
-  --muted: --alpha(var(--color-black) / 4%);
-  --muted-foreground: color-mix(in srgb, var(--color-neutral-500) 90%, var(--color-black));
-  --popover: var(--color-white);
-  --popover-foreground: var(--color-neutral-800);
-  --primary: var(--color-neutral-800);
-  --primary-foreground: var(--color-neutral-50);
-  --ring: var(--color-neutral-400);
-  --secondary: --alpha(var(--color-black) / 4%);
-  --secondary-foreground: var(--color-neutral-800);
+  --accent: #E9F2FD;
+  --accent-foreground: #292B2F;
+  --background: #EEF3F9;
+  --border: #E7E7E7;
+  --card: #FFFFFF;
+  --card-foreground: #292B2F;
+  --destructive: #FF5F5A;
+  --destructive-foreground: #FF5F5A;
+  --foreground: #292B2F;
+  --info: #258BFB;
+  --info-foreground: #258BFB;
+  --input: #E7E7E7;
+  --muted: #F8F8F8;
+  --muted-foreground: #6E6E6E;
+  --popover: #FFFFFF;
+  --popover-foreground: #292B2F;
+  --primary: #292B2F;
+  --primary-foreground: #F5F7FA;
+  --ring: #258BFB;
+  --secondary: #F8F8F8;
+  --secondary-foreground: #292B2F;
   --success: var(--color-emerald-500);
   --success-foreground: var(--color-emerald-700);
   --warning: var(--color-amber-500);
   --warning-foreground: var(--color-amber-700);
-  --chart-1: var(--color-orange-600);
-  --chart-2: var(--color-teal-600);
-  --chart-3: var(--color-cyan-900);
-  --chart-4: var(--color-amber-400);
-  --chart-5: var(--color-amber-500);
-  --sidebar: var(--color-neutral-50);
-  --sidebar-foreground: color-mix(
-    in srgb,
-    var(--color-neutral-800) 64%,
-    var(--sidebar)
-  );
-  --sidebar-primary: var(--color-neutral-800);
-  --sidebar-primary-foreground: var(--color-neutral-50);
-  --sidebar-accent: --alpha(var(--color-black) / 4%);
-  --sidebar-accent-foreground: var(--color-neutral-800);
-  --sidebar-border: --alpha(var(--color-black) / 6%);
-  --sidebar-ring: var(--color-neutral-400);
-  --code: var(--color-white);
+  --chart-1: #258BFB;
+  --chart-2: #D8EB12;
+  --chart-3: #6E6E6E;
+  --chart-4: #A3ABB5;
+  --chart-5: #292B2F;
+  --sidebar: #FFFFFF;
+  --sidebar-foreground: #292B2F;
+  --sidebar-primary: #258BFB;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #EEF3F9;
+  --sidebar-accent-foreground: #292B2F;
+  --sidebar-border: #E7E7E7;
+  --sidebar-ring: #258BFB;
+  --code: #FFFFFF;
   --code-foreground: var(--foreground);
-  --code-highlight: --alpha(var(--color-black) / 4%);
+  --code-highlight: #F8F8F8;
 }
 
 .dark {
-  --accent: --alpha(var(--color-white) / 4%);
-  --accent-foreground: var(--color-neutral-100);
-  --background: color-mix(
-    in srgb,
-    var(--color-neutral-950) 96%,
-    var(--color-white)
-  );
-  --border: --alpha(var(--color-white) / 6%);
-  --card: color-mix(in srgb, var(--background) 98%, var(--color-white));
-  --card-foreground: var(--color-neutral-100);
-  --destructive: color-mix(in srgb, var(--color-red-500) 90%, var(--color-white));
-  --destructive-foreground: var(--color-red-400);
-  --foreground: var(--color-neutral-100);
-  --info: var(--color-blue-500);
-  --info-foreground: var(--color-blue-400);
-  --input: --alpha(var(--color-white) / 8%);
-  --muted: --alpha(var(--color-white) / 4%);
-  --muted-foreground: color-mix(in srgb, var(--color-neutral-500) 90%, var(--color-white));
-  --popover: color-mix(in srgb, var(--background) 98%, var(--color-white));
-  --popover-foreground: var(--color-neutral-100);
-  --primary: var(--color-neutral-100);
-  --primary-foreground: var(--color-neutral-800);
-  --ring: var(--color-neutral-500);
-  --secondary: --alpha(var(--color-white) / 4%);
-  --secondary-foreground: var(--color-neutral-100);
+  --accent: #252A31;
+  --accent-foreground: #F5F7FA;
+  --background: #171A1F;
+  --border: #343A43;
+  --card: #20242A;
+  --card-foreground: #F5F7FA;
+  --destructive: #FF5F5A;
+  --destructive-foreground: #F5F7FA;
+  --foreground: #F5F7FA;
+  --info: #258BFB;
+  --info-foreground: #258BFB;
+  --input: #3C434D;
+  --muted: #252A31;
+  --muted-foreground: #A3ABB5;
+  --popover: #24292F;
+  --popover-foreground: #F5F7FA;
+  --primary: #F5F7FA;
+  --primary-foreground: #171A1F;
+  --ring: #258BFB;
+  --secondary: #252A31;
+  --secondary-foreground: #F5F7FA;
   --success: var(--color-emerald-500);
   --success-foreground: var(--color-emerald-400);
   --warning: var(--color-amber-500);
   --warning-foreground: var(--color-amber-400);
-  --chart-1: var(--color-blue-700);
-  --chart-2: var(--color-emerald-500);
-  --chart-3: var(--color-amber-500);
-  --chart-4: var(--color-purple-500);
-  --chart-5: var(--color-rose-500);
-  --sidebar: color-mix(
-    in srgb,
-    var(--color-neutral-950) 97%,
-    var(--color-white)
-  );
-  --sidebar-foreground: color-mix(
-    in srgb,
-    var(--color-neutral-100) 64%,
-    var(--sidebar)
-  );
-  --sidebar-primary: var(--color-neutral-100);
-  --sidebar-primary-foreground: var(--color-neutral-800);
-  --sidebar-accent: --alpha(var(--color-white) / 4%);
-  --sidebar-accent-foreground: var(--color-neutral-100);
-  --sidebar-border: --alpha(var(--color-white) / 5%);
-  --sidebar-ring: var(--color-neutral-400);
-  --code: color-mix(in srgb, var(--background) 98%, var(--color-white));
+  --chart-1: #258BFB;
+  --chart-2: #D8EB12;
+  --chart-3: #A3ABB5;
+  --chart-4: #6E6E6E;
+  --chart-5: #F5F7FA;
+  --sidebar: #171A1F;
+  --sidebar-foreground: #F5F7FA;
+  --sidebar-primary: #258BFB;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #252A31;
+  --sidebar-accent-foreground: #F5F7FA;
+  --sidebar-border: #343A43;
+  --sidebar-ring: #258BFB;
+  --code: #20242A;
   --code-foreground: var(--foreground);
-  --code-highlight: --alpha(var(--color-white) / 4%);
+  --code-highlight: #252A31;
 }
 
 @layer base {
@@ -1350,4 +1332,97 @@ input:-webkit-autofill:active {
     cursor: grabbing !important;
   }
 
+}
+
+/* A PORTA da família Inn — ver scripts/innagent-stack/porta/ESPECIFICACAO.md.
+   `data-porta` marca o <html> enquanto a tela de entrada está no ar: é escopo
+   de CSS e trava do tema ao mesmo tempo. A ação da porta é TINTA (#383B3F) e
+   não a cor da marca — o azul só pinta link, foco e estado. */
+[data-porta] {
+  --primary: #383B3F;
+  --primary-foreground: #FFFFFF;
+}
+
+/* Os CONTROLES — a régua da spec (seção "Controles", 08/09/2026).
+   🪤 Quem PINTA o campo neste motor é o <span data-slot="input-control">: é
+   ele que tem borda, fundo e raio. O <input data-slot="input"> de dentro vem
+   com `border-width: 0` e 30px de altura (`h-8.5 sm:h-7.5`) — medir ele dá a
+   resposta errada, e mexer só no wrapper cresce a caixa deixando o texto
+   desalinhado. Por isso os DOIS são ajustados: 44 na casca, 42 no miolo.
+   Os seletores de atributo ganham das utilidades do Tailwind por
+   especificidade (0,2,0 contra 0,1,0), qualquer que seja a ordem na folha. */
+[data-porta] [data-slot="input-control"] {
+  height: 44px;
+  border-radius: 8px;
+  border: 1px solid #E7E7E7;
+  background: #FFFFFF;
+  box-shadow: none;          /* o anel de sombra do motor sai: a borda basta */
+  font-size: 15px;
+}
+[data-porta] [data-slot="input-control"]::before {
+  border-radius: 7px;
+  box-shadow: none;
+}
+/* O miolo se pega pela ESTRUTURA (o input dentro de quem pinta), não pelo
+   `data-slot="input"`: o <FormControl> do motor é um Slot e SOBRESCREVE o slot
+   do filho por `form-control` — no e-mail o atributo é esse, na senha é
+   `input`. Mirar o slot pegava um campo e deixava o outro com 30px de miolo
+   dentro de uma casca de 44. */
+[data-porta] [data-slot="input-control"] input {
+  height: 42px;              /* 44 menos 1px de borda de cada lado */
+  line-height: 42px;
+  padding-inline: 14px;
+  font-size: 15px;
+}
+/* Rótulo: 12/700, caixa alta, com o respiro entre letras da prancha.
+   `display: flex` não é enfeite: o rótulo do motor é `inline-flex`, e caixa
+   em LINHA arrasta a ENTRELINHA do contêiner — nascia 8px de sobra ACIMA
+   dela (form-item de 72px onde 12+8+44 = 64 de conteúdo). Como bloco, o
+   espaço em volta do rótulo passa a ser só a margem que a régua manda. */
+[data-porta] [data-slot="form-label"],
+[data-porta] [data-slot="label"] {
+  display: flex;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.18em;
+  /* 18px exatos: sem isto o rotulo herda o line-height do motor (12px no Kaneo,
+     16.8 no Chatwoot) e o bloco de campo fica com altura diferente em cada porta. */
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #6E6E6E;
+}
+/* Os ESPAÇAMENTOS — a régua da spec: 6 do rótulo ao campo, 20 do campo ao
+   rótulo seguinte, 20 do último campo ao botão.
+   🪤 O espaço vem do `space-y-*` do MOTOR (`space-y-2` dentro do form-item,
+   `space-y-3` no form) mais o `mt-4` do botão. Troca-se no CONTÊINER: somar
+   margem no campo empilharia com o que já está lá — era assim que 6+20+20
+   chegavam à tela como 8, 28 e 28. */
+[data-porta] [data-slot="form-item"] > :not(:last-child) {
+  margin-block-end: 6px;
+}
+[data-porta] [data-slot="form-item"]:not(:last-child),
+[data-porta] form > :not(:last-child) {
+  margin-block-end: 20px;
+}
+[data-porta] form [data-slot="button"] {
+  margin-block-start: 0;   /* o `mt-4` do motor somava 16 aos 12 do space-y-3 */
+}
+[data-porta] [data-slot="button"] {
+  height: 44px;              /* 44 é alvo de toque, não capricho */
+  border-radius: 48px;
+  font-size: 15px;
+  font-weight: 700;
+}
+[data-porta] [data-slot="button"]::before {
+  border-radius: 47px;
+}
+/* Foco DECLARADO, nunca herdado do navegador — e no lugar do anel de sombra
+   do motor, que sai junto. */
+[data-porta] [data-slot="input-control"]:has(:focus-visible),
+[data-porta] [data-slot="button"]:focus-visible,
+[data-porta] a:focus-visible {
+  outline: 2px solid #258BFB;
+  outline-offset: 2px;
+  box-shadow: none;
 }
