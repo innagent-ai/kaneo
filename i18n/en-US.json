@@ -195,8 +195,8 @@
 			"or": "or",
 			"email": "Email",
 			"password": "Password",
-			"emailPlaceholder": "me@example.com",
-			"passwordPlaceholder": "••••••••",
+			"emailPlaceholder": "name@company.com",
+			"passwordPlaceholder": "Password",
 			"showPassword": "Show password",
 			"hidePassword": "Hide password"
 		},

@@ -195,8 +195,8 @@
 			"or": "ou",
 			"email": "Email",
 			"password": "Mot de passe",
-			"emailPlaceholder": "moi@exemple.fr",
-			"passwordPlaceholder": "••••••••",
+			"emailPlaceholder": "nom@entreprise.com",
+			"passwordPlaceholder": "Mot de passe",
 			"showPassword": "Afficher le mot de passe",
 			"hidePassword": "Masquer le mot de passe"
 		},
