@@ -12,6 +12,7 @@ import {
   useSidebar,
 } from "@/components/ui/sidebar";
 import { VersionDisplay } from "@/components/version-display";
+import { Simbolo } from "@/components/common/logo";
 import { WorkspaceSwitcher } from "@/components/workspace-switcher";
 import { shortcuts } from "@/constants/shortcuts";
 import { useRegisterShortcuts } from "@/hooks/use-keyboard-shortcuts";
@@ -36,7 +37,12 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       {...props}
     >
       <SidebarHeader className="pt-1 pb-1.5">
-        <WorkspaceSwitcher />
+        <div className="flex items-center gap-2 px-1">
+          <Simbolo />
+          <div className="min-w-0 flex-1">
+            <WorkspaceSwitcher />
+          </div>
+        </div>
       </SidebarHeader>
       <SidebarContent className="overflow-hidden gap-1 py-1">
         <Search />
