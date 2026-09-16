@@ -1,0 +1,72 @@
+# Constrói a imagem do InnTask (Kaneo com a IDV do InnAgent).
+#
+# Por que existe: o build local na manager01 foi morto por falta de memória em
+# 5 de 7 tentativas em 08/09 — a máquina sustenta cinco sessões Claude, MCP
+# servers e o dockerd, e um `docker build` de monorepo Node pica alto demais.
+# O runner tem a folga que ela não tem. Mesmo padrão do publish_innagent_docker
+# do fork do Chatwoot, que passou por seis ciclos sem um kill.
+name: Publish InnTask docker image
+
+on:
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: 'Branch já com o tema aplicado (ex.: innagent-2.23.1)'
+        required: true
+      tag:
+        description: 'Tag da imagem (ex.: 2.23.1)'
+        required: true
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.ref }}
+
+      - uses: docker/setup-buildx-action@v3
+
+      - name: Build
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: Dockerfile.kaneo
+          platforms: linux/amd64
+          push: false
+          load: true
+          tags: kaneo-innagent:${{ inputs.tag }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      # Guarda do tema: sem isto o build fica verde publicando uma imagem que
+      # compilou bem e não tem a IDV — o defeito que "artefato conferido não é
+      # tela conferida" descreve.
+      - name: Prova — a IDV do InnAgent está no CSS compilado
+        run: |
+          cid=$(docker create kaneo-innagent:${{ inputs.tag }})
+          docker cp "$cid:/usr/share/nginx/html" ./dist
+          docker rm "$cid" > /dev/null
+          css=$(cat ./dist/assets/*.css)
+          falhas=0
+          checa() {
+            if echo "$css" | grep -qE -- "$2"; then echo "ok   $1"
+            else echo "FALTA $1 ($2)"; falhas=$((falhas+1)); fi
+          }
+          checa "fonte Lato"        "Lato"
+          checa "tinta da porta"    "#383[Bb]3[Ff]|56, *59, *63"
+          checa "campo 44px"        "44px"
+          test "$falhas" = "0" || { echo "$falhas token(s) do tema faltando"; exit 1; }
+
+      - name: Exportar a imagem
+        run: docker save kaneo-innagent:${{ inputs.tag }} | gzip -1 > inntask.tar.gz
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: inntask-${{ inputs.tag }}
+          path: inntask.tar.gz
+          retention-days: 5
+          compression-level: 0
